@@ -37,10 +37,10 @@ public class ODAccessibilityTest {
 		options.addArguments("use-fake-ui-for-media-stream");
 
 		driver = new ChromeDriver(options);
-//		driver.manage().window().maximize();
-		Dimension d = new Dimension(375, 936);
+		driver.manage().window().maximize();
+//		Dimension d = new Dimension(375, 936);
 		// Resize the current window to the given dimension
-		driver.manage().window().setSize(d);
+//		driver.manage().window().setSize(d);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
 		accessibilityRunner = new AccessibilityRunner(driver);
